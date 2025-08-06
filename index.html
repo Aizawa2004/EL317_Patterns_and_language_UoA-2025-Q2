@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sentence Type Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sentence Type Analyzer & Converter</h1>
+
+    <!-- テキスト入力エリア -->
+    <label for="textInput">Enter your sentence(s):</label>
+    <textarea id="textInput" placeholder="Type or paste your sentence(s) here..."></textarea>
+
+    <!-- ファイルアップロード -->
+    <div class="file-upload">
+      <label for="fileInput">Upload ".txt" files:</label>
+      <input type="file" id="fileInput" accept=".txt" multiple>
+    </div>
+
+    <!-- 分類ボタン -->
+    <div class="analysis-section">
+    <button id="analyzeBtn" class="primary-btn">Analyze Sentence Type</button>
+    </div>
+
+    <!-- 変換操作セクション -->
+    <div class="conversion-section">
+    <label>Convert to:</label>
+    <div class="conversion-row">
+        <div class="conversion-types">
+        <button class="convert-type" data-type="Simple">Simple</button>
+        <button class="convert-type" data-type="Compound">Compound</button>
+        <button class="convert-type" data-type="Complex">Complex</button>
+        </div>
+        <button id="convertBtn" class="primary-btn">Convert Sentence</button>
+    </div>
+    </div>
+
+     <!-- 出力結果をまとめて表示する枠 -->
+    <div id="multiResults" class="multi-output">
+        <!-- 出力欄 -->
+        <div class="output">
+        <h2>Result</h2>
+        <p><strong>Detected Type:</strong> <span id="detectedType">-</span></p>
+        <p><strong>Converted Sentence:</strong></p>
+        <div id="convertedText" class="output-box"></div>
+        </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
