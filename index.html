@@ -9,6 +9,15 @@
   <div class="container">
     <h1>Sentence Type Analyzer & Converter</h1>
 
+    <!-- 言語選択 -->
+    <div class="language-select">
+      <label for="langSelect">Language:</label>
+      <select id="langSelect">
+        <option value="en" selected>English</option>
+        <option value="ja">日本語</option>
+      </select>
+    </div>
+
     <!-- テキスト入力エリア -->
     <label for="textInput">Enter your sentence(s):</label>
     <textarea id="textInput" placeholder="Type or paste your sentence(s) here..."></textarea>
@@ -52,6 +61,7 @@
 
   <script src="https://unpkg.com/compromise"></script>
   <script src="https://unpkg.com/compromise-sentences"></script>
+  <script src="https://unpkg.com/kuromoji@0.1.2/build/kuromoji.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
